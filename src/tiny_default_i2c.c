@@ -17,6 +17,8 @@ i_tiny_i2c_t* tiny_default_i2c_init(unsigned baudrate)
     baudrate,
     PICO_DEFAULT_I2C_SDA_PIN,
     PICO_DEFAULT_I2C_SCL_PIN);
+
+  return &self.interface;
 }
 
 #endif

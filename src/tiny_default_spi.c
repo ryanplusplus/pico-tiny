@@ -25,6 +25,8 @@ i_tiny_spi_t* tiny_default_spi_init(
     PICO_DEFAULT_SPI_RX_PIN,
     PICO_DEFAULT_SPI_TX_PIN,
     PICO_DEFAULT_SPI_SCK_PIN);
+
+  return &self.interface;
 }
 
 #endif
