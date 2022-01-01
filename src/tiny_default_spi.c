@@ -4,7 +4,6 @@
  */
 
 #include "tiny_default_spi.h"
-#include "pico/stdlib.h"
 
 #ifdef spi_default
 
@@ -16,7 +15,7 @@ i_tiny_spi_t* tiny_default_spi_init(
   spi_cpol_t cpol,
   spi_order_t order)
 {
-  return tiny_spi_init(
+  tiny_spi_init(
     &self,
     spi_default,
     baudrate,

@@ -6,8 +6,8 @@
 #ifndef tiny_i2c_h
 #define tiny_i2c_h
 
-#include "hal/i_tiny_i2c.h"
 #include "hardware/i2c.h"
+#include "hal/i_tiny_i2c.h"
 
 typedef struct
 {

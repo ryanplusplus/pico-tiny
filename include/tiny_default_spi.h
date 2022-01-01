@@ -8,10 +8,14 @@
 
 #include "tiny_spi.h"
 
+#ifdef spi_default
+
 i_tiny_spi_t* tiny_default_spi_init(
   unsigned baudrate,
   spi_cpha_t cpha,
   spi_cpol_t cpol,
   spi_order_t order);
+
+#endif
 
 #endif

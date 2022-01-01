@@ -3,8 +3,8 @@
  * @brief
  */
 
-#include "tiny_i2c.h"
 #include "hardware/gpio.h"
+#include "tiny_i2c.h"
 #include "tiny_utils.h"
 
 static bool write(

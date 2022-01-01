@@ -3,8 +3,8 @@
  * @brief
  */
 
-#include "heartbeat.h"
 #include "pico/stdlib.h"
+#include "heartbeat.h"
 
 #ifdef PICO_DEFAULT_LED_PIN
 

@@ -6,8 +6,8 @@
 #ifndef tiny_spi_h
 #define tiny_spi_h
 
-#include "hal/i_tiny_spi.h"
 #include "hardware/spi.h"
+#include "hal/i_tiny_spi.h"
 
 typedef struct
 {
@@ -15,12 +15,15 @@ typedef struct
   spi_inst_t* spi;
 } tiny_spi_t;
 
-void tiny_spoi_init(
+void tiny_spi_init(
   tiny_spi_t* self,
   spi_inst_t* spi,
   unsigned baudrate,
   spi_cpha_t cpha,
   spi_cpol_t cpol,
-  spi_order_t order);
+  spi_order_t order,
+  unsigned cipo,
+  unsigned copi,
+  unsigned sck);
 
 #endif

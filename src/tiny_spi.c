@@ -3,8 +3,8 @@
  * @brief
  */
 
-#include "tiny_spi.h"
 #include "hardware/gpio.h"
+#include "tiny_spi.h"
 #include "tiny_utils.h"
 
 static void transfer(
