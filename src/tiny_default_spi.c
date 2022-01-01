@@ -6,7 +6,7 @@
 #include "tiny_default_spi.h"
 #include "pico/stdlib.h"
 
-#ifdef PICO_DEFAULT_SPI
+#ifdef spi_default
 
 static tiny_spi_t self;
 
@@ -18,7 +18,7 @@ i_tiny_spi_t* tiny_default_spi_init(
 {
   return tiny_spi_init(
     &self,
-    spi##PICO_DEFAULT_SPI##_inst,
+    spi_default,
     baudrate,
     cpha,
     cpol,
