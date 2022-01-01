@@ -8,6 +8,6 @@
 
 #include "hal/i_tiny_uart.h"
 
-i_tiny_uart_t* tiny_uart0_init(unsigned baudrate);
+i_tiny_uart_t* tiny_uart0_init(unsigned baudrate, unsigned rx, unsigned tx);
 
 #endif
