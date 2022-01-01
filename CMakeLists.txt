@@ -15,4 +15,7 @@ target_include_directories(pico_tiny INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include
 target_link_libraries(pico_tiny INTERFACE
   tiny
   tiny_devices
+  pico_stdlib
+  hardware_i2c
+  hardware_spi
 )
