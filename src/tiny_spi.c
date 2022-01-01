@@ -4,6 +4,7 @@
  */
 
 #include "tiny_spi.h"
+#include "hardware/gpio.h"
 #include "tiny_utils.h"
 
 static void transfer(
@@ -35,10 +36,17 @@ void tiny_spi_init(
   unsigned baudrate,
   spi_cpha_t cpha,
   spi_cpol_t cpol,
-  spi_order_t order)
+  spi_order_t order,
+  unsigned cipo,
+  unsigned copi,
+  unsigned sck)
 {
   self->spi = spi;
   self->interface.api = &api;
+
+  gpio_set_function(cipo, GPIO_FUNC_SPI);
+  gpio_set_function(sck, GPIO_FUNC_SPI);
+  gpio_set_function(copi, GPIO_FUNC_SPI);
 
   spi_init(spi, baudrate);
   spi_set_format(spi, 8, cpol, cpha, order);

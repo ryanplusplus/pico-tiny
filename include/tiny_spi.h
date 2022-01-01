@@ -15,7 +15,7 @@ typedef struct
   spi_inst_t* spi;
 } tiny_spi_t;
 
-void tiny_spi_init(
+void tiny_spoi_init(
   tiny_spi_t* self,
   spi_inst_t* spi,
   unsigned baudrate,
