@@ -8,9 +8,8 @@
 
 #ifdef PICO_DEFAULT_LED_PIN
 
-static void blink(tiny_timer_group_t* group, void* context)
+static void blink(void* context)
 {
-  (void)group;
   (void)context;
   static bool state;
   gpio_put(PICO_DEFAULT_LED_PIN, state = !state);
