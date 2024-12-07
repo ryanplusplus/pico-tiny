@@ -24,9 +24,7 @@ void tiny_heartbeat_init(tiny_timer_group_t* timer_group)
   tiny_timer_start_periodic(timer_group, &tiny_heartbeat_timer, 500, NULL, blink);
 }
 
-#endif
-
-#ifdef CYW43_WL_GPIO_LED_PIN
+#elif defined(CYW43_WL_GPIO_LED_PIN)
 
 #include "pico/cyw43_arch.h"
 
